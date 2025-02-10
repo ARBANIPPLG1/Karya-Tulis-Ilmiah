@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <LINK REL="stylesheet" href="./style/quiz.css">
+    <title>Quiz</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">Selamatkan Bumi Mulai Dari Sekolah Kita!</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="../index.html" style="--i:0;">Home</a>
+            <a href="./halamaninformasi.html" style="--i:1;">Information</a>
+            <a href="./tips.html" style="--i:2;">Tips</a>
+            <a href="./quiz.html" style="--i:3;">Quiz</a>
+            <!--<a href="#" style="--i:4;">Contact</a>-->
+    
+        </nav>
+    </header>
+
+<div class="app">
+    <h1>Simple Quiz</h1>
+    <div class="quiz">
+        <h2 id="question">Question goes here</h2>
+        <div id="answer-buttons">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+        <button id="next-btn">Next</button>
+    </div>
+</div>
+    <script src="./script/quiz.js"></script>
+</body>
+</html>
