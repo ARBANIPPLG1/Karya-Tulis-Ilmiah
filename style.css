@@ -228,7 +228,7 @@ button:hover {
     .content h1 {
         font-size: 23px;
         margin-top: 160px;
-        color: #fff;
+        color: #000;
     }
 
     .content h3 {
@@ -266,7 +266,99 @@ button:hover {
     }
 }
 
-@media (max-width: 390px) {
+@media (min-width: 379px) and (max-width: 490px) {
+    .icons {
+        display: inline-flex;
+        font-size: 1.5rem;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+    .icons #close-icon {
+        display: none;
+    }
+
+        #check:checked~.icons #close-icon {
+            display: block;
+        }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    .navbar a::after{
+        display: none;
+    }
+
+    #check:checked~.navbar {
+        height: 17.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+    
+    .content {
+        width: 100%;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        text-align: center;
+        color: #fff;
+    }
+
+    .content h1 {
+        font-size: 19px;
+        margin-top: 85px;
+        color: black;
+        padding: 10px;
+    }
+    
+    .content p {
+        margin: 20px auto;
+        font-weight: 75px;
+        line-height: 20px;
+        font-size: 20px;
+        color: black;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+
+    .logo{
+        font-size: 12px;
+        
+    }
+
+    body {
+        /*min-height: 100vh;*/
+        background: url('./webclear/gambar/hijaumobile.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+
+@media (max-width: 378px) {
     .icons {
         display: inline-flex;
         font-size: 1.5rem;
