@@ -177,8 +177,8 @@ function selectAnswer(e) {
 function showScore(){
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`
-    nextButton.innerHTML = "Play Again";
-    nextButton.style.display = "block";
+    /*nextButton.innerHTML = "Play Again";*/
+    nextButton.style.display = "none";
 }
 
 function handleNextButton(){
@@ -190,14 +190,20 @@ function handleNextButton(){
     }
 }
 
+//fungsi play again
 
-nextButton.addEventListener("click", ()=>{
+/*nextButton.addEventListener("click", ()=>{
     if(currentQuestionIndex < questions.length){
         handleNextButton();
     }else{
         startQuiz();
     }
 });
+startQuiz();*/
+
+
+//menonaktifkan tombol play again
+nextButton.addEventListener("click", handleNextButton);
 
 startQuiz();
 
